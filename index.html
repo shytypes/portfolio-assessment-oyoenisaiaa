@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>OA's Portfolio</title>
     <!-- add fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +18,163 @@
   </head>
   <body>
     <!-- Header Area -->
-    <header></header>
+    <header>
+      <div class="theme-toggle">
+        <button id="toggle-theme">🌙</button>
+      </div>
+
+    <!-- Profile section -->
+      <section id="profile">
+          <div class="profile-container">
+            <div><p class="title">OYOENISAI ANDREW-ESSIEN</p></div>
+            <div>
+              <img class="my-image" 
+              src="/assets/images/Oyoenisai Andrew-Essien.png" 
+              alt="professional image of a lady in a pink blazer">
+
+              <div class="fade-text">
+                <div class="my-name">Oyoenisai (O-yo-ni-zai)</div>
+              </div>
+
+            </div>
+          </div>
+      
+          <div class="contact-container">
+            <div class="my-email">
+              ✉️ Email: <a href="mailto:oyoenisaiaa@gmail.com">Click to send</a>
+            </div>
+
+            <div class="my-phone">
+              📞 Phone: +234 (0) 806-123-4567
+            </div>
+
+            <div class="my-linkedin">
+              🔗 LinkedIn: <a href="https://www.linkedin.com/in/oyoenisaiaa/" 
+              target="_blank" 
+              rel="noopener noreferrer">linkedin.com/in/oyoenisaiaa</a>
+            </div>
+          </div>
+      </section>
+      
+
+    </header>
+
     <!-- Main Area -->
-    <main>
-      <h1>My Amazing Portfolio</h1>
+     <main>
+      <section id="summary">
+        <p>
+          <span class="title">Summary</span><br>
+          Oyoenisai is a Developer who has created projects using Python, JavaScript, HTML, CSS, JavaScript, and frameworks such as 
+          Node, React, Tailwind, Bootstrap, etc. 
+          Oyoenisai's goal is to become a MERN developer but she is always open to learning about other frameworks and technologies.
+          In addition to software engineering, she brings over a decade experience in growth marketing,
+          data analysis, and product marketing. As a product owner, she is versed in project management and cross-team collaboration.
+        </p>
+      </section>
+
+      <section class="space-style" id="education">
+        <p class="title">Education</p>
+        <hr>
+        <span class="main-span">
+          <p>
+            B. Agric in Agricultural Economics & Extension | 
+            <time datetime="2025-03">3/2025</time> – <time datetime="2025-04">4/2025</time><br>
+            <a href="#">Top University</a> - Nigeria
+          </p>
+        </span>
+
+        <ul>
+          <li>Identified Animals</li>
+          <li>Leader on Agricultural projects</li>
+        </ul>
+
+      </section>
+
+      <section class="space-style" id="experience">
+        <p class="title">Experience</p>
+        <hr>
+        <div id="experience-1">
+          <span class="main-span">
+            <p>
+              <a 
+              href="https://www.womentechsters.org/" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              Women Techsters</a> - Africa | Trainee | 
+              <time datetime="2025-03">3/2025</time> – <time datetime="2025-04">4/2025</time>
+            </p>
+          </span>
+  
+          <ul>
+            <li>Front-End Web Development</li>
+            <li>DOM Manipulation</li>
+          </ul>
+        </div>
+
+        <div id="experience-2">
+          <span class="main-span">
+            <p>
+              <a 
+              href="https://www.ses.com" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              SES Satellites</a> - Africa, MECA & NOAM | Senior Marketing Manager | 
+              <time datetime="2025-03">3/2025</time> – <time datetime="2025-04">4/2025</time>
+            </p>
+          </span>
+  
+          <ul>
+            <li>Growth & Product Marketing</li>
+            <li>Lead and Demand Generation</li>
+            <li>Database & Campaign Management</li>
+          </ul>
+        </div>
+
+      </section>
+
+
+      <section id="hobbies-skills-parent">
+        <div class="hobbies-skills-child">
+          <p class="title">Skills</p>
+          <hr>
+          <ul>
+            <li>🌐 HTML/CSS/JavaScript</li>
+            <li>🧑🏻‍💻 Python</li>
+            <li>📈 SQL</li>
+            <li>🐙 GitHub</li>
+            <li>📌 Project Management</li>
+          </ul>
+        </div>
+
+        <div class="hobbies-skills-child">
+          <p class="title">Hobbies</p>
+          <hr>
+          <ul>
+            <li>💻 Coding</li>
+            <li>📊 Research</li>
+            <li>🎬 Movie Buff</li>
+            <li>🍕 Cooking</li>
+            <li>🎤 Singing</li>
+          </ul>
+        </div>
+
+      </section>
     </main>
+
+    <script>
+      const toggleButton = document.getElementById('toggle-theme');
+      const root = document.documentElement;
+    
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+    
+        // icon toggle
+        if (document.body.classList.contains('light-mode')) {
+          toggleButton.textContent = '☀️';
+        } else {
+          toggleButton.textContent = '🌙';
+        }
+      });
+    </script>
   </body>
 </html>
