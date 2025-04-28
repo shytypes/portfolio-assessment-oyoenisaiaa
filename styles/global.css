@@ -91,6 +91,8 @@ body {
   flex-direction: column;
   flex: 1;
   line-height: 1.4;
+  margin: 0;
+  min-height: 100vh; /* Ensure the body takes up at least the full height of the page */
 }
 
 /* Profile container styling */
@@ -239,6 +241,10 @@ hr {
   margin-top: 20px; 
 }
 
+#experience-3 { 
+  margin-top: 20px; 
+}
+
 #experience > div:nth-child(3) {
   margin-bottom: 4px;
 }
@@ -281,6 +287,33 @@ div.hobbies-skills-child li{
   /* line-height: 1.5; */ /* line-height adds spacing between the bullets. I am happy with the default */
 }
 
+/* .main-footer {
+  background-color: var(--bgc);
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+} */
+
+.main-footer {
+  background: var(--white);
+  color: var(--black);
+  text-align: center;
+  padding: 20px;
+  /* position: absolute;  */ /* Always at the bottom */
+  position: relative; /* Ensure footer stays below content */
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  margin-top: 50px; /* Ensure space above footer */
+}
+
+html, body {
+  height: 100%;
+}
+
 
 /* Light mode overrides */
 body.light-mode {
@@ -292,7 +325,7 @@ body.light-mode hr {
   background-color: var(--bgc); /*dark bgc used as hr in light mode */
 }
 
-body.light-mode .contact-container {
+body.light-mode .contact-container  {
   background-color: var(--bgc);
   color: var(--white);
 }
@@ -307,6 +340,11 @@ body.light-mode a {
 
 body:not(.light-mode) {
   --focus-ring: var(--white);
+}
+
+body.light-mode .main-footer{
+  background-color: var(--bgc);
+  color: var(--white);
 }
 
 
